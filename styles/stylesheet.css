@@ -6,6 +6,13 @@ body {
     color: #666666;
 }
 
+#background-canvas {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: -1;
+}
+
 img {
     width: 100%;
     animation: fadeIn 0.5s forwards;
@@ -295,7 +302,82 @@ button:disabled {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/* Mobile-first responsive improvements to prevent overflow */
 
-@media (max-width: 500px) {
+/* Base fixes for all pages */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 100%;
+        position: relative;
+    }
 
+    .navigation {
+        width: 100% !important;
+        padding: 20px 0 10px !important;
+        justify-content: space-around;
+    }
+
+    .nav-item {
+        font-size: 14px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .nav-item::after {
+        height: 15px !important;
+        bottom: -7px !important;
+    }
+
+    .title-container {
+        width: 95% !important;
+        margin-top: 80px !important;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .sub-nav-item {
+        font-size: 14px !important;
+    }
+
+    .page-title {
+        font-size: 24px !important;
+        margin-top: 20px !important;
+        text-align: center !important;
+    }
+
+
+    /* Footer adjustments */
+    footer {
+        margin-top: 20px !important;
+        padding: 15px 10px !important;
+    }
+
+    /* Better tap targets */
+    button, select, a {
+        min-height: 44px !important;
+        min-width: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Fine-tuning for extremely small screens */
+@media (max-width: 320px) {
+
+
+    .navigation {
+        font-size: 12px !important;
+    }
+
+    .nav-item {
+        font-size: 12px !important;
+    }
 }

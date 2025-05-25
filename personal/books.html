@@ -5,77 +5,8 @@
   <title>Sonia's Books</title>
   <link rel="icon" href="/images/icons/heart3.png" />
   <link rel="stylesheet" href="../styles/stylesheet.css">
-  <style>
-    .content {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: 40px;
-      width: 80%;
-      margin: 40px auto;
-    }
+  <link rel="stylesheet" href="../styles/gallery.css">
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 30px;
-      margin-bottom: 100px;
-    }
-
-    .thumbnail {
-      aspect-ratio: 2/3;
-      cursor: pointer;
-      transition: opacity 0.3s;
-    }
-
-    .thumbnail img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border: 1px solid #666666;
-    }
-
-    .thumbnail:hover {
-      opacity: 0.7;
-    }
-
-    .preview-section {
-      position: sticky;
-      top: 120px;
-      background: #f5f5f5;
-      padding: 20px;
-      height: calc(100vh - 200px); /* Set fixed height for container */
-      border: 1px solid #666666;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .preview-img {
-      min-width: 200px;
-      width: 100%;
-      border: 1px solid #666666;
-      flex-shrink: 0; /* Prevent image from shrinking */
-    }
-
-    .movie-info {
-      margin-top: 20px;
-      overflow-y: auto; /* Enable vertical scrolling */
-      flex-grow: 1; /* Allow text container to grow */
-    }
-
-    .movie-title {
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .movie-description {
-      font-size: 10px;
-      line-height: 1.5;
-      color: #666;
-      padding-right: 10px; /* Add space for scrollbar */
-    }
-
-  </style>
 </head>
 <body>
 <nav class="navigation">

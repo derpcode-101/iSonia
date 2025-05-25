@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sonia's website</title>
+    <link href="../style/stylesheet.css" rel="stylesheet">
+    <link rel="icon" href="../style/shapes/heart1.png" />
+</head>
+<body>
+<div class="imgContainer">
+    <img alt="star" src="../style/shapes/star1.png" class="imgExample" style="width: 30px; -webkit-animation-delay: 0s;animation-delay: 0s;-webkit-animation-duration: 8s;animation-duration: 8s; right:100%; margin-right: -200px;" />
+    <img alt="star" src="../style/shapes/star2.png" class="imgExample" style="width: 30px; -webkit-animation-delay: 1s;animation-delay: 1s;-webkit-animation-duration: 8s;animation-duration: 8s; right:30%; margin-right: -210px;" />
+    <img alt="heart" src="../style/shapes/heart1.png" class="imgExample" style="width: 30px; -webkit-animation-delay: 2s;animation-delay: 2s; -webkit-animation-duration: 8s;animation-duration: 8s; right:100%; margin-right: -190px;" />
+    <img alt="star" src="../style/shapes/star3.png" class="imgExample" style="width: 30px; -webkit-animation-delay: 3s;animation-delay: 3s; -webkit-animation-duration: 8s;animation-duration: 8s; right:30%; margin-right: -200px;" />
+    <img alt="star" src="../style/shapes/heart2.png" class="imgExample" style="width: 30px; -webkit-animation-delay: 0s;animation-delay: 0s; -webkit-animation-duration: 10s;animation-duration: 10s; right:100%; margin-right: -250px;" />
+    <img alt="star" src="../style/shapes/heart3.png" class="imgExample" style="width: 30px; -webkit-animation-delay: 2s;animation-delay: 2s; -webkit-animation-duration: 10s;animation-duration: 10s; right:30%; margin-right: -250px;" />
+    <img alt="star" src="../style/shapes/spark1.png" class="imgExample" style="width: 30px; -webkit-animation-delay: 3s;animation-delay: 3s; -webkit-animation-duration: 7s;animation-duration: 7s; right:30%; margin-right: -190px;" />
+    <img alt="star" src="../style/shapes/spark2.png" class="imgExample" style="width: 30px; -webkit-animation-delay: 0s;animation-delay: 0s; -webkit-animation-duration: 10s;animation-duration: 10s; right:100%; margin-right: -250px;" />
+    <img alt="star" src="../style/shapes/spark3.png" class="imgExample" style="width: 30px; -webkit-animation-delay: 2s;animation-delay: 1s; -webkit-animation-duration: 8s;animation-duration: 8s; right:30%; margin-right: -240px;" />
+
+    <a href="index.html">
+        <div class="titleBlock">
+            <h>*** Soniapolis ***</h>
+        </div>
+    </a>
+
+        <div id="menuBar">
+            <a href="index.html"><button>Home</button></a>
+
+            <a href="professional.html"><button>Professional</button></a>
+
+            <a href="entertainment.html"><button>Fun</button></a>
+
+            <a href="forMe.html"><button>For Me Page</button></a>
+
+            <a href="wishlist.html"><button>Junk Drawer</button></a>
+            &nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+<div class="backgroundBlock">
+    <div id="content">
+        <div id="moodboard_container">
+            <div class="moodboard">
+                <br>
+
+                <h3 class="center">Resume</h3>
+                <a href="resume.html">
+                    <img src="../images/professional/GeneralResume.png" alt="resume file" style="border-radius: 4px; border-color: black" class="center" width="80%">
+                </a>
+                <br>
+                <h3 class="center">Recent Projects
+                    <p style="font-size: 18px">Optical Flow in MRI Imaging</p>
+                    <img src="../images/professional/optical_flow.gif" alt="optical flow" style="border-radius: 4px; border-color: black" class="center" width="80%">
+                    <img src="../images/professional/AMRGAtlas.gif" alt="optical flow" style="border-radius: 4px; border-color: black" class="center" width="80%">
+                </h3>
+                <br>
+            </div>
+        </div>
+
+        <div id="main_column">
+
+            <h2>~~~ Current Projects ~~~</h2>
+
+            <h3>Thinkpad</h3>
+
+            <p>
+                My friend gifted me an empty ThinkPad to play around with. I wanted a computer with Linux installed, so I decided to set up
+                Linux on there. The ThinkPad did not have an internal hard-drive, so here is what I did to install it:<br><br>
+            </p>
+
+            <p>
+                Equipment:<br>
+                - SSD Hard drive<br>
+                - SATA to USB cable<br>
+                <br>
+
+                Plan:<br>
+                - Download Linux ubuntu from personal computer onto new SSD.<br>
+                <br>
+
+                Downloaded Ubuntu from <a href="https://ubuntu.com/download/desktop">here.</a><br><br>
+
+                Step-by-step process:<br><br>
+
+                First, confirm that what you downloaded is the Ubuntu ISO file (it should end in .iso)<br><br>
+
+                Ensure that the SSD is formatted properly:
+
+                <ol>
+                <li>Open Disk Utility on your Mac
+                <li>Select the SSD from the left sidebar
+                <li>Click "Erase"
+                <li>Choose "MS-DOS (FAT)" or "ExFAT" as the format
+                <li>Choose "GUID Partition Map" as the scheme
+                <li>Give it a name and click "Erase"
+                </ol>
+
+                To create the bootable drive, you'll need to use Terminal. The built-in 'dd' command can do this:<br><br>
+
+
+            <ol>
+                <li>Open Terminal
+                <li>Type diskutil list to identify your SSD's identifier (it will be something like /dev/disk2)
+                <li>Unmount the SSD with: diskutil unmountDisk /dev/diskN (replace N with your disk number)
+                <li>Use dd to write the ISO: sudo dd if=/path/to/ubuntu.iso of=/dev/rdiskN bs=1m
+                <li>(replace /path/to/ubuntu.iso with the actual path to your ISO file, and N with your disk number)
+                <li>Enter your password when prompted
+                <li>Wait for the process to complete (it might take a while and won't show progress)
+            </ol>
+
+            Once completed, safely eject the SSD using the command: diskutil eject /dev/disk4<br><br>
+                Resources:<br>
+                - <a href="https://www.lenovo.com/us/en/glossary/how-to-install-solid-state-hard-drive/?orgRef=https%253A%252F%252Fwww.google.com%252F&srsltid=AfmBOoov0aGSC9NHF70HoXaYOweiiwscQ4UmmXszhZKxce_Ul3TPpc1N">
+                Levovo: Installing an SSD</a><br>
+                - <a href="https://4chanarchives.com/board/g/thread/281340">ThinkPad general (4chan)</a><br>
+        </p>
+
+            <br>
+
+            <h3>Music</h3>
+            <p>
+                Artists:<br>
+                - fennesz<br>
+                - William basinski<br>
+                - ryuichi sakamoto<br>
+                <br>
+
+                Software:<br>
+                - max msp<br>
+                - ppooll :  a digital signal processing (DSP) environment for Max/MSP.<br>
+                - tracker program such as renoise or schism<br>
+                <br>
+
+                Schism Tracker Resources:<br>
+                - <a href="https://schismtracker.org/">Official Documentation</a><br>
+                - <a href="https://youtu.be/gpx9td6xE7E">Distance / Lackluster - Thor's Magic Bathtub</a><br><br>
+
+                Sunvox Resources:<br>
+                - <a href="https://www.youtube.com/watch?v=P4x0SFhaUnc&ab_channel=arcologies">polyend tracker + sunvox - "solar realms" - ambient idm project files</a><br>
+                - ableton<br>
+                <br>
+
+                Hardware/Samplers:<br>
+                - Roland SP-404MKII Sampler and Effector<br>
+                <br>
+
+                Edu:<br>
+                - <a href="https://www.youtube.com/watch?v=KxNfc8YDIjI&ab_channel=BoBeats">BoBeats</a><br>
+
+            </p>
+
+        </div>
+    </div>
+</div>
+
+
+</div>
+</body>
+</html>
+
+
+<!--
+<a href="tel:+4733378901">+47 333 78 901</a>
+<a href="mailto:someone@example.com">Send email</a>
+
+<a href="https://www.w3schools.com">
+<img border="0" alt="W3Schools" src="logo_w3s.gif" width="100" height="100">
+</a>
+
+
+
+<h7>
+                <a href="about.html">About</a>
+            </h7>
+            <h7>
+                <a href=".html">Services</a>
+            </h7>
+            <h7>
+                <a href="professional.html">Journal</a>
+            </h7>
+            <h7>
+                <a href="contact.html">Contact</a>
+            </h7>
+
+-->

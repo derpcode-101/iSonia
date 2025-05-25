@@ -7,8 +7,8 @@
 }
 
 .clock-wrapper {
-    width: 100%;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     padding: 20px;
     position: relative;
     border-top: none;
@@ -17,12 +17,12 @@
 
 
 .clock {
-    width: 160px;
-    height: 160px;
+    width: 100%;
+    height: 100%;
     border-radius: 2px;
     border: 1px solid #ff0000;
     position: relative;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .clock-face {
@@ -167,4 +167,34 @@
     border: none;
     padding: 2px 5px;
     cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .widgets-container {
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+
+    .clock-wrapper {
+        max-width: 100px;
+        max-height: 20px;
+    }
+
+    .clock {
+        display: none;
+    }
+
+    .digital-time {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    /* Clock and widgets container adjustments */
+    .widgets-container {
+        margin: 20px auto !important;
+        max-width: 250px !important;
+    }
+
 }

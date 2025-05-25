@@ -1,0 +1,535 @@
+.titleBlock {
+    display: block;
+    margin: 20px auto;
+    text-align: left;
+    z-index: 100;
+    width: 95%;
+    height: 125px;
+    border: 1px solid #757474;
+    border-radius: 2px;
+    color: #000000;
+    padding: 10px 0 10px 0;
+    background-image: url(/style/backgrounds/bckgrd.jpg);
+}
+
+.backgroundBlock {
+    display: block;
+    margin: 20px auto;
+    z-index: 100;
+    width: 90%;
+    border: 1px solid #757474;
+    border-radius: 2px;
+    justify-content: center;
+    background: gainsboro;
+    border-block-color: black;
+    color: #000000;
+    padding: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+
+.contentBlockCenter {
+    display: block;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    border-radius: 2px;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+
+    border: 1px solid #757474;
+    background-color: mistyrose;
+    color: #000000;
+    border-block-color: black;
+}
+
+.contentBlockWide {
+    display: block;
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    border-radius: 2px;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+
+    border: 1px solid #757474;
+    background-color: #d0d0d0;
+    color: #000000;
+    border-block-color: black;
+}
+
+
+.sidebar {
+    width: 80%;
+    min-height: 850px;
+    margin: 0 24px 27px 0;
+    background: aliceblue;
+    border: 1px solid #bbbbbb;
+    box-shadow: 7px 5px 5px rgb(64 64 64 / 20%);
+}
+
+#sidebar_container {
+    float: right;
+    width: 22%;
+    min-height: 200px;
+    margin: auto;
+}
+
+#moodboard_container {
+    float: left;
+    width: 27%;
+    margin: auto;
+    height: 100%; /* Add this line */
+}
+
+.moodboard {
+    width: 80%;
+    margin: 0 24px 27px 0;
+    background: #d0d0d0;
+    border: 1px solid #999999;
+    height: 100%; /* Change min-height: auto to height: 100% */
+}
+
+#content {
+    width: 90%;
+    display: block;
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 4px;
+    float: none;
+    text-align: justify;
+    padding: 10px 10px 10px 10px;
+    margin: 0px auto 0px auto;
+    font-size: 2.5vw;
+    overflow: hidden;
+    height: 100%;
+
+    /* box-shadow: 5px 5px 7px rgb(64 64 64 / 20%); */
+}
+
+#menuBar {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 50px;
+    border: 1px solid #757474;
+    border-radius: 2px;
+    background-color: gainsboro;
+    text-align: center;
+    color: #000000;
+    justify-content: center;
+    border-block-color: black;
+    padding: 10px 10px 10px 10px;
+
+}
+
+#main {
+    width: 950px;
+    margin: 20px auto;
+}
+
+#main_column {
+    float: none;
+    text-align: center;
+    padding: 0 5px 0 5px;
+    margin: auto;
+    justify-content: center;
+
+}
+
+
+
+div {
+    display: block;
+}
+
+body {
+    background-color: #EBEBEB;
+}
+
+h {
+    font: normal 350% 'Optima', arial, sans-serif;
+    text-shadow: 2px 2px 4px #757474;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+
+}
+
+h2 {
+    font: normal 100% 'Optima', arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+}
+
+h3 {
+    font: normal 80% 'Optima', arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    color: #111111;
+    margin: 10px 10px 10px 10px;
+}
+
+h4 {
+    font: normal 60% 'Optima', arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    color: #111111;
+    margin: 10px 10px 10px 10px;
+
+}
+
+p {
+    font: normal 50% 'Optima', arial, sans-serif;
+    color: #111;
+    text-align: left;
+    margin: 30px 30px 30px 30px;
+
+}
+
+p2 {
+    font: normal 65% 'Optima', arial, sans-serif;
+    color: #111;
+    text-align: left;
+    font-weight: 500;
+    line-height: 0.7;
+
+
+}
+
+
+
+img{
+    text-align:center;
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+
+button {
+    color: #FFE5E5;
+    background-color: papayawhip;
+    text-align:center;
+    font: normal 250% 'Optima', arial, sans-serif;
+
+    box-shadow: 5px 5px #999;
+    cursor: pointer;
+    outline: none;
+    border-color: silver;
+    border-style: outset;
+    border-radius: 3px;
+    font-size: 25px;
+    margin-left: 20px;
+    object-fit: cover;
+}
+
+button:active {
+    box-shadow: 4px 3px #666;
+    transform: translateY(2px);
+}
+
+
+
+a:link:active, a:visited:active {
+    color: cornflowerblue;
+}
+
+
+button:hover {background-color: #FFE5E5}
+
+
+
+
+.imgContainer{width: 100%; overflow: hidden; position: absolute; text-align: right; z-index: 100}
+.imgExample{position: absolute; top: -450px; opacity: 0.75; z-index: 100;
+    animation: imgExampleSlide ease-in infinite;
+    -webkit-animation: imgExampleSlide ease-in infinite;
+    -moz-animation: imgExampleSlide ease-in infinite;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;}
+@keyframes imgExampleSlide {from {position: absolute; top: -450px;} to {position: absolute; top: 100%;}}
+@-webkit-keyframes imgExampleSlide {from {position: absolute; top: -450px;} to {position: absolute; top: 100%;}}
+@-moz-keyframes imgExampleSlide {from {position: absolute; top: -450px;} to {position: absolute; top: 100%;}}
+
+
+.buttons{
+    margin-top: 3%;
+}
+
+button{
+    width: 15%;
+    height: 45px;
+    font-size: 11px;
+    font-family: Optima;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #000;
+    background-color: snow;
+    border-radius: 2%;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin: 0 1%;
+}
+
+button:not([disabled]):hover{
+    background-color: #E7E7E7;
+    box-shadow: 0px 10px 15px black;
+    color: black;
+    transform: translateY(-3px);
+}
+
+button:disabled{
+    color: #999;
+}
+
+.column {
+    display: block;
+    float: left;
+    width: 32%;
+    padding: 60px 0 60px 0;
+    margin: 0.5% 0.5% 0.5% 0.5%;
+    font-size: 2.5vw;
+    border-radius: 4px;
+
+}
+
+.column:hover{
+    background: #e1e1e1;
+    border: 2px outset #d0d0d0;
+}
+
+.columnFun {
+    display: block;
+    float: left;
+    width: 32%;
+    min-height: 1600px;
+    padding: 60px 0 60px 0;
+    margin: 0.52% 0.4% 0.4% 0.4%;
+    font-size: 2.5vw;
+    border-radius: 2px;
+    border: 2px outset #d0d0d0;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.insideBlock {
+    width: 60%;
+    background: aliceblue;
+    border: 1px solid #bbbbbb;
+    float: none;
+    margin: auto;
+    padding: 20px 0 20px 0;
+    display: block;
+    font-size: 2.5vw;
+    border-radius: 4px;
+
+}
+
+.insideBlock:hover{
+    background: #e1e1e1;
+    border: 2px outset #d0d0d0;
+}
+
+.journal {
+    position: relative;
+    border-radius: 7px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    height: 95%;
+    width: 95%;
+    z-index: 0;
+}
+
+.mySlides, .mySlidesBook2, .mySlidesBook3, .mySlidesMovie{
+    display: none;
+    margin: 1em auto;
+}
+
+.mySlidesAnime, .mySlidesWish {
+    margin: 5em ;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+    margin: 1em auto;
+}
+
+.numbertext {
+    color: #333333;
+    background-color: snow;
+    border-radius: 6px;
+    border: 1px solid #757474;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 3%;
+    top: 0;
+}
+
+.journalText1 {
+    top: 6%;
+    left: 33%;
+    display: block;
+    position: absolute;
+    text-align: left;
+    width: 30%;
+    height: 65%;
+    justify-content: center;
+    font: normal 60% 'Optima', arial, sans-serif;
+    font-weight: 500;
+    color: #111111;
+    margin: 10px 10px 10px 10px;
+    /*
+    left: 33%;
+    margin: 10px 10px 10px 10px;*/
+
+}
+
+
+.journalText2 {
+    top: 6%;
+    right: 6%;
+    display: block;
+    position: absolute;
+    text-align: left;
+    width: 25%;
+    height: 60%;
+    justify-content: center;
+    font: normal 60% 'Optima', arial, sans-serif;
+    font-weight: 500;
+    color: #111111;
+    margin: 10px 10px 10px 10px;
+    /*right: 6%;
+    margin: 10px 10px 10px 10px;*/
+}
+
+wishList {
+    top: 6%;
+    right: 6%;
+    display: block;
+    position: absolute;
+    text-align: left;
+    width: 25%;
+    height: 60%;
+    justify-content: center;
+    font: normal 60% 'Optima', arial, sans-serif;
+    font-weight: 500;
+    color: #111111;
+    margin: 10px 10px 10px 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: sticky;
+    top: 50%;
+    width: 0%;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+a, a:hover {
+    outline: none;
+    text-decoration: none;
+    color: darkcyan;
+}
+
+.dot, .dotBook2, .dotBook3, .dotMovie {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+.dotAnime, .dotWish {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+.collapsible {
+    width: 85%;
+    background: snow;
+    border: 1px solid #bbbbbb;
+    float: none;
+    margin: auto;
+    padding: 20px 0 20px 0;
+    display: block;
+    font-size: 2.5vw;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.active, .collapsible:hover {
+    background: ghostwhite;
+    border: 1px outset #d0d0d0;
+
+}
+
+
+.colContent {
+    width: 85%;
+    background-color: snow;
+    border: 1px solid #bbbbbb;
+    float:none;
+    margin: auto;
+    padding: 20px 0 20px 0;
+    display: none;
+    font-size: 2.5vw;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#player {
+    width: 80%;
+}
+
+
+.blur img{
+    transition: 1s ease;
+}
+
+.blur img:hover {
+    -webkit-filter: blur(5px);
+    transition: 1s ease;
+}
+
+
+

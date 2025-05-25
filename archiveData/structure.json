@@ -10,7 +10,7 @@
     "image": null
   },
   {
-    "id": "misc",
+    "id": "interesting",
     "title": "COOL THINGS",
     "image": null
   },
@@ -25,7 +25,7 @@
     "image": "../images/resources/people/binary.jpg"
   },
   {
-    "id": "videogames",
+    "id": "games",
     "title": "VIDEO GAMES",
     "image": null
   },

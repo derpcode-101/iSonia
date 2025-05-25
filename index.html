@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <title>Sonia Online</title>
   <link rel="icon" href="/images/icons/heart3.png" />
   <link rel="stylesheet" href="styles/stylesheet.css">
@@ -14,14 +15,11 @@
   <script src="scripts/projects/projects.js"></script>
 
   <style>
-    #background-canvas {
-      position: fixed;
-      top: 30%;
-      left: 0;
-      z-index: -1;
-    }
+
     .content {
-      display: flex;
+      display: grid;
+      overflow-wrap: normal;
+      grid-template-columns: repeat(3, 1fr);
       max-width: 80%;
       margin: 0 auto;
       gap: 40px;
@@ -41,12 +39,16 @@
     }
 
     .description h1 {
+      font-size: 30px;
       font-weight: unset;
     }
     .left-column {
-      flex: 1;
       display: flex;
+      flex: 1;
       flex-direction: column;
+    }
+    .right-column {
+      margin: auto;
     }
 
     .profile-section {
@@ -58,18 +60,6 @@
       margin-top: 50px;
     }
 
-    .preview-image {
-      width: 250px;
-      height: 250px;
-      background: #eee;
-      border: 1px solid #ddd;
-      margin-right: 30px;
-      flex-shrink: 0;
-    }
-
-    .description {
-      flex: 1;
-    }
 
     .project-images {
       width: 100%;
@@ -94,16 +84,51 @@
       transform: translateX(100%); /* Move other images off to the right */
     }
 
-    /* Add visual indicator for projects with multiple images */
-    .gallery-item {
-      position: relative !important;
-      text-decoration: none;
-      color: #3b5998;
+    @media (max-width: 1000px) {
+      .preview-image {
+        width: 200px !important;
+        height: 200px !important;
+      }
     }
 
-    .gallery-item p {
-      font-family: Optima, sans-serif;
-      text-align: center;
+      @media (max-width: 768px) {
+
+        html, body {
+          overflow-x: hidden;
+          width: 100%;
+          max-width: 100%;
+          position: relative;
+        }
+
+        .content {
+          grid-template-columns: 1fr !important;
+          max-width: 95% !important;
+          gap: 20px !important;
+          margin: 0 auto !important;
+        }
+
+        .profile-section {
+          flex-direction: column;
+          align-items: center;
+        }
+
+
+      .preview-image {
+        width: 200px !important;
+        height: 200px !important;
+        margin: 0 auto 10px !important;
+        float: none !important;
+      }
+
+      .description {
+        text-align: center;
+      }
+
+      .description img {
+        float: none !important;
+        margin: 10px auto !important;
+        display: block;
+      }
     }
 
 
@@ -128,7 +153,7 @@
   </div>
 </div>
 
-<main class="content">
+<div class="content">
   <div class="left-column">
     <div class="profile-section">
       <div class="preview-image">
@@ -136,7 +161,7 @@
       </div>
       <div class="description">
         <br>
-        <img src="images/personal/board-removebg.png" alt="Gallery item 3" style="float: right; width:40%">
+        <img src="images/personal/board-removebg.png" alt="Gallery item 3" style="float: right; width:50%">
         <h1>SONIA SHARAPOVA</h1>
         <p>
           I sent you my http://localhost:3000 please respond<br><br>
@@ -400,7 +425,7 @@
 
     </div>
   </div>
-</main>
+</div>
 <div class="modal" id="imageModal">
   <div class="modal-content">
     <button class="modal-close">✕</button>
@@ -409,6 +434,120 @@
 </div>
 <script>
   animate();
+
+  // Add this JavaScript to improve mobile experience
+  document.addEventListener('DOMContentLoaded', function() {
+    // Prevent overscroll/bounce effect on iOS
+    document.body.addEventListener('touchmove', function(e) {
+      if (e.target.closest('.scrollable') === null) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    // Fix for gallery items on mobile
+    const updateGalleryItems = () => {
+      if (window.innerWidth <= 768) {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+          // Ensure project images are positioned correctly
+          const images = item.querySelectorAll('.project-images img');
+          images.forEach(img => {
+            img.style.position = 'absolute';
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+          });
+
+          // Fix topic branch positioning
+          const topicBranch = item.querySelector('.topic-branch');
+          if (topicBranch) {
+            topicBranch.style.left = '5px';
+          }
+        });
+      }
+    };
+
+    // Initialize and update on resize
+    updateGalleryItems();
+    window.addEventListener('resize', updateGalleryItems);
+
+    // Improve navigation for small screens
+    const nav = document.querySelector('.navigation');
+    if (nav && window.innerWidth <= 500) {
+      const navItems = nav.querySelectorAll('.nav-item');
+      navItems.forEach(item => {
+        item.textContent = item.textContent.substring(0, 4); // Shorten nav text on very small screens
+      });
+    }
+
+    // Fix clock and calendar positioning
+    const adjustWidgets = () => {
+      if (window.innerWidth <= 768) {
+        const widgetsContainer = document.querySelector('.widgets-container');
+        if (widgetsContainer) {
+          widgetsContainer.style.margin = '20px auto';
+          widgetsContainer.style.maxWidth = '250px';
+        }
+      }
+    };
+
+    adjustWidgets();
+    window.addEventListener('resize', adjustWidgets);
+  });
+
+  // JavaScript to force vertical layout on mobile
+  document.addEventListener('DOMContentLoaded', function() {
+    // Force vertical layout on mobile
+    function forceVerticalLayout() {
+      if (window.innerWidth <= 768) {
+        // Switch to vertical layout
+        const content = document.querySelector('.content');
+        if (content) {
+          content.style.display = 'flex';
+          content.style.flexDirection = 'column';
+        }
+
+        // Force gallery to be vertical
+        const gallery = document.querySelector('.gallery');
+        if (gallery) {
+          gallery.style.display = 'flex';
+          gallery.style.flexDirection = 'column';
+          gallery.style.gap = '30px';
+
+          // Make each project item full width and taller
+          const galleryItems = document.querySelectorAll('.gallery-item');
+          galleryItems.forEach(item => {
+            item.style.width = '100%';
+            item.style.height = '200px';
+            item.style.marginBottom = '40px';
+
+            // Center project title
+            const title = item.querySelector('p');
+            if (title) {
+              title.style.textAlign = 'center';
+              title.style.fontSize = '16px';
+              title.style.marginTop = '5px';
+              title.style.fontWeight = 'bold';
+            }
+          });
+        }
+
+        // Fix the right column layout
+        const rightColumn = document.querySelector('.right-column');
+        if (rightColumn) {
+          rightColumn.style.width = '100%';
+          rightColumn.style.margin = '0 auto';
+        }
+      }
+    }
+
+    // Run on load and when window resizes
+    forceVerticalLayout();
+    window.addEventListener('resize', forceVerticalLayout);
+
+    // Run again after a short delay to ensure it applies after any other scripts
+    setTimeout(forceVerticalLayout, 500);
+  });
 </script>
 <footer>
   <p style="text-align: center">
